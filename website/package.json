@@ -1,0 +1,31 @@
+{
+  "name": "copilot-cli-workshop",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "check:tsgo": "tsgo --noEmit -p tsconfig.tsgo.json",
+    "check:all": "npm run check && npm run check:tsgo"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/markdown-remark": "7.2.4",
+    "@astrojs/starlight": "^0.41.4",
+    "astro": "^7.2.4",
+    "sharp": "^0.35.3",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20260707.2",
+    "remark-github-admonitions-to-directives": "^2.1.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}
