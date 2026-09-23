@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import remarkGithubAdmonitionsToDirectives from 'remark-github-admonitions-to-directives';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // Lesson callouts are authored in GitHub admonition syntax (`> [!NOTE]`). This
 // remark plugin rewrites them into Starlight aside directives before Starlight
@@ -24,6 +25,9 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       [remarkGithubAdmonitionsToDirectives, { mapping: githubAdmonitionMapping }],
+    ],
+    rehypePlugins: [
+      [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
     ],
   },
   integrations: [
