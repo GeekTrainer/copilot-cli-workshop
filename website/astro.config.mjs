@@ -18,7 +18,7 @@ const githubAdmonitionMapping = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://geektrainer.dev',
+  site: 'https://geektrainer.github.io',
   base: '/copilot-cli-workshop',
   trailingSlash: 'always',
   markdown: {
